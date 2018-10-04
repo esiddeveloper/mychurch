@@ -1,0 +1,58 @@
+ext.versionss = [
+        constrainLayout: "1.1.2",
+        androidX1      : "1.0.0",
+        androidX1Rc1   : "1.0.0-rc01",
+        androidX2      : "2.0.0-rc",
+
+        dagger         : "2.17",
+
+        rxJava2        : "2.2.2",
+        rxAndroid      : "2.1.0",
+
+        okhttp         : "3.11.0",
+        retrofit       : "2.4.0",
+        gson           : "2.8.5",
+
+        espresso       : "3.1.0-alpha3",
+        mockito        : "2.22.1",
+        mockitoKotlin  : "1.6.0",
+]
+ext.library = [
+        appCompat             : "androidx.appcompat:appcompat:$versions.androidX1",/*implementation*/
+        recyclerView          : "androidx.recyclerview:recyclerview:$versions.androidX1",
+        cardView              : "androidx.cardview:cardview:$versions.androidX1",
+        coordinatLayout       : "androidx.coordinatorlayout:coordinatorlayout:$versions.androidX1",
+        design                : "com.google.android.material:material:$versions.androidX1Rc1",
+
+        dagger                : "com.google.dagger:dagger:$versions.dagger",
+        daggerAndroid         : "com.google.dagger:dagger-android:$versions.dagger",
+        daggerAndroidSupport  : "com.google.dagger:dagger-android-support:$versions.dagger",
+
+        daggerCompiler        : "com.google.dagger:dagger-compiler:$versions.dagger",/*kapt*/
+        daggerAndroidCompiler : "com.google.dagger:dagger-android-processor:$versions.dagger",
+
+        rxJava2               : "io.reactivex.rxjava2:rxjava:$versions.rxJava2",/*implementation*/
+        rxAndroid             : "io.reactivex.rxjava2:rxandroid:$versions.rxAndroid",
+
+        okhttp                : "com.squareup.okhttp3:okhttp:$versions.okhttp",
+        okhttpInterceptor     : "com.squareup.okhttp3:okhttp:$versions.okhttp",
+        retrofit              : "com.squareup.retrofit2:retrofit:$versions.retrofit",
+        retrofitGsonConverter : "com.squareup.retrofit2:converter-gson:$versions.retrofit",
+        retrofitRxJava        : "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit",
+        gson                  : "com.google.code.gson:gson:$versions.gson",
+
+        glide                 : "com.github.bumptech.glide:glide:$versions.glide",
+        glideAnnotation       : "com.github.bumptech.glide:compiler:$versions.glide",
+
+        //Test Library
+        webServer             : "com.squareup.okhttp3:mockwebserver:$versions.okhttp",/*testImplementation*/
+
+        mockito               : "org.mockito:mockito-core:$versions.mockito",
+        mockitoAndroid        : "org.mockito:mockito-android:$versions.mockito", /*androidTestImplementation*/
+        mockitoKotlin         : "com.nhaarman:mockito-kotlin:$versions.mockitoKotlin",
+
+        espressoContrib       : "androidx.test.espresso:espresso-contrib:$versions.espresso",/*androidTestImplementation*/
+        espressoCore          : "androidx.test.espresso:espresso-core:$versions.espresso",
+        espressoIdlingResource: "androidx.test.espresso:espresso-idling-resource:$versions.espresso",
+        espressoIntents       : "androidx.test.espresso:espresso-intents:$versions.espresso",
+]
