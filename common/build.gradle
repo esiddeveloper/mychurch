@@ -1,28 +1,32 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 apply plugin: 'kotlin-android'
-
 apply plugin: 'kotlin-android-extensions'
-
 apply plugin: 'kotlin-kapt'
+
 
 android {
     compileSdkVersion 28
     buildToolsVersion "28.0.1"
+
+
     defaultConfig {
-        applicationId "com.kidnapsteal.mychruch"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
     }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
@@ -32,19 +36,13 @@ dependencies {
     implementation depen.appCompat
     implementation depen.ktx
 
-    implementation 'androidx.appcompat:appcompat:1.0.0-alpha1'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
-    implementation 'com.google.android.material:material:1.0.0-alpha1'
     testImplementation depen.junit
     androidTestImplementation depen.testRunner
     androidTestImplementation depen.espressoCore
-
-    implementation depen.gson
 
     implementation depen.dagger
     implementation depen.daggerAndroid
     implementation depen.daggerAndroidSupport
     kapt depen.daggerCompiler
     kapt depen.daggerAndroidCompiler
-
 }
