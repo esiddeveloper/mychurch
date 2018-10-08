@@ -45,4 +45,15 @@ dependencies {
     implementation depen.daggerAndroidSupport
     kapt depen.daggerCompiler
     kapt depen.daggerAndroidCompiler
+
+    implementation depen.gson
+    implementation depen.okhttp
+    implementation depen.okhttpInterceptor
+    implementation depen.retrofit
+    implementation depen.retrofitGsonConverter
+    implementation depen.retrofitRxJava
+    implementation depen.okHttpLogging
+
+    implementation depen.rxJava2
+    implementation depen.rxAndroid
 }

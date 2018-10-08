@@ -2,16 +2,14 @@ package com.kidnapsteal.mychruch.di
 
 import android.app.Application
 import android.content.Context
-import com.google.gson.Gson
+import com.kidnapsteal.common.di.qualifier.ApplicationContext
 import dagger.Binds
 import dagger.Module
-import dagger.Provides
-import javax.inject.Named
-import javax.inject.Scope
 
 @Module
 abstract class AppModule {
     @Binds
+    @ApplicationContext
     abstract fun bindContext(app: Application): Context
 
 }

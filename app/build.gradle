@@ -28,6 +28,8 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    implementation internal.common
+
     implementation depen.kotlin
     implementation depen.appCompat
     implementation depen.ktx
@@ -46,5 +48,6 @@ dependencies {
     implementation depen.daggerAndroidSupport
     kapt depen.daggerCompiler
     kapt depen.daggerAndroidCompiler
+
 
 }
