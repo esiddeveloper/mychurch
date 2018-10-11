@@ -41,9 +41,8 @@ ext.depen = [
         rxJava2               : "io.reactivex.rxjava2:rxjava:$versions.rxJava2",/*implementation*/
         rxAndroid             : "io.reactivex.rxjava2:rxandroid:$versions.rxAndroid",
 
-        okHttpLogging         : "com.squareup.okhttp3:logging-interceptor:$versions.okhttp",
         okhttp                : "com.squareup.okhttp3:okhttp:$versions.okhttp",
-        okhttpInterceptor     : "com.squareup.okhttp3:okhttp:$versions.okhttp",
+        okhttpInterceptor     : "com.squareup.okhttp3:logging-interceptor:$versions.okhttp",
         retrofit              : "com.squareup.retrofit2:retrofit:$versions.retrofit",
         retrofitGsonConverter : "com.squareup.retrofit2:converter-gson:$versions.retrofit",
         retrofitRxJava        : "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit",

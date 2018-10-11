@@ -1,6 +1,7 @@
 package com.kidnapsteal.mychruch
 
 import android.app.Activity
+import com.kidnapsteal.common.di.DaggerCommonComponent
 import com.kidnapsteal.mychruch.di.DaggerAppComponent
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
@@ -18,7 +19,8 @@ open class MyChurch : DaggerApplication(), HasActivityInjector {
     }
 
     override fun applicationInjector(): AndroidInjector<out DaggerApplication> {
-        return DaggerAppComponent.builder().application(this).build()
+        val commitComponent = DaggerCommonComponent.builder().application(this).build()
+        return DaggerAppComponent.builder().application(this).commitComponent(commitComponent).build()
     }
 
 }
