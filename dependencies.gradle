@@ -1,10 +1,12 @@
-ext.versionss = [
+ext.versions = [
+        kotlin         : "1.2.50",
+
         constrainLayout: "1.1.2",
         androidX1      : "1.0.0",
         androidX1Rc1   : "1.0.0-rc01",
         androidX2      : "2.0.0-rc",
 
-        dagger         : "2.17",
+        dagger         : "2.16",
 
         rxJava2        : "2.2.2",
         rxAndroid      : "2.1.0",
@@ -16,8 +18,13 @@ ext.versionss = [
         espresso       : "3.1.0-alpha3",
         mockito        : "2.22.1",
         mockitoKotlin  : "1.6.0",
+        testRunner     : "1.1.0-alpha3",
+        junit          : "4.12"
 ]
-ext.library = [
+ext.depen = [
+        kotlin                : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin",
+        ktx                   : "androidx.core:core-ktx:$versions.androidX1",
+
         appCompat             : "androidx.appcompat:appcompat:$versions.androidX1",/*implementation*/
         recyclerView          : "androidx.recyclerview:recyclerview:$versions.androidX1",
         cardView              : "androidx.cardview:cardview:$versions.androidX1",
@@ -35,7 +42,7 @@ ext.library = [
         rxAndroid             : "io.reactivex.rxjava2:rxandroid:$versions.rxAndroid",
 
         okhttp                : "com.squareup.okhttp3:okhttp:$versions.okhttp",
-        okhttpInterceptor     : "com.squareup.okhttp3:okhttp:$versions.okhttp",
+        okhttpInterceptor     : "com.squareup.okhttp3:logging-interceptor:$versions.okhttp",
         retrofit              : "com.squareup.retrofit2:retrofit:$versions.retrofit",
         retrofitGsonConverter : "com.squareup.retrofit2:converter-gson:$versions.retrofit",
         retrofitRxJava        : "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit",
@@ -55,4 +62,11 @@ ext.library = [
         espressoCore          : "androidx.test.espresso:espresso-core:$versions.espresso",
         espressoIdlingResource: "androidx.test.espresso:espresso-idling-resource:$versions.espresso",
         espressoIntents       : "androidx.test.espresso:espresso-intents:$versions.espresso",
+
+        testRunner            : "androidx.test:runner:$versions.testRunner",
+        junit                 : "junit:junit:$versions.junit"
+]
+
+ext.internal = [
+        common       : project(':common')
 ]
