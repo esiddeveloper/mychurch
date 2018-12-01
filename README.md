@@ -1,1 +1,1 @@
-# mychurch
+# sample-project-circle-ci
